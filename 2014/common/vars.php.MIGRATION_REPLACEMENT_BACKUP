@@ -1,0 +1,7 @@
+<?php
+	//DB
+	$server = "mysql15.opentransfer.com";
+	$bd = "mkpw3b_mkp";
+	$user = "mkpw3b_mkpuser";
+	$password = "Mkp!44";
+?>

@@ -1,0 +1,7 @@
+Options +FollowSymLinks
+
+RewriteCond %{SCRIPT_FILENAME} !-d  
+RewriteCond %{SCRIPT_FILENAME} !-f  
+  
+RewriteEngine On 
+RewriteRule (.*)$ detail_invisible.php?page_name=$1 

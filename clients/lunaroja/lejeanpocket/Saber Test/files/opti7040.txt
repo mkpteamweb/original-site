@@ -1,0 +1,47 @@
+Model: Dell Optiplex 7040 - MiniTower
+Processor: Intel® Core™ i5-6500 Processor (Quad Core, 6MB, 4T, 3.2GHz, 65W)
+Operating System: Windows 10 Pro, 64bit English, French, Spanish
+Memory: 8GB (2x4G) 2133MHz DDR4 Memory
+Hard Drive: 3.5 inch 500GB 7200rpm Hard Disk Drive
+Video Card: AMD Radeon™ R5 340X (2GB DP/DVI-I)
+Removable Media Storage Device: 8x DVD+/-RW 9.5mm Optical Disk Drive
+Wireless: No Wireless
+Keyboard:Dell KB216 Wired Keyboard English Black
+Mouse: Dell MS116 Wired Mouse Black
+Optical Software: Cyberlink Media Suite Essentials without Media for Win10/8.1
+Hardware Support Services: 3 Year Hardware Service with Onsite/In-Home Service After Remote Diagnosis
+Price: $922.24
+
+
+
+Model: OptiPlex 7040 Small Form Factor
+Processor: Intel® Core™ i7-6700 Processor (Quad Core, 8MB, 8T, 3.4GHz, 65W)
+Operating System: Windows 7 Professional English, French, Spanish 64bit (Includes Windows 10 Pro License)
+Memory: 8GB (2x4G) 2133MHz DDR4 Memory
+Hard Drive: M.2 256GB PCIe NVMe Class 40 Solid State Drive
+Video Card: Intel® Integrated Graphics
+Removable Media Storage Device: 8x DVD+/-RW 9.5mm Optical Disk Drive
+Keyboard: Dell KB216 Wired Keyboard English Black
+Mouse: Dell MS116 Wired Mouse Black
+Hardware Support Services: 3 Year Hardware Service with Onsite/In-Home Service After Remote Diagnosis
+Price: $1,149.00
+
+
+
+Laptops:
+
+ThinkPad X1 Carbon 4th Generation
+Part Number: 20FB0059US
+Processor: Intel Core i5-6300U Processor( 2.40GHz 1866MHz 3MB)
+Operating system: Windows 10 Pro 64
+Display: 14.0" FHD IPS AntiGlare LED Backlight 1920x1080
+Graphics: Intel HD Graphics 520
+Memory: 8.0GB LPDDR3-1600 LPDDR3 1600 MHz
+Hard Drive: 256GB SSD SATA
+Network Card: Intel Wireless 8260(2x2AC) with BT4.1
+Warranty: Three year
+Pointing device: UltraNav (TrackPoint and ClickPad) with Fingerprint Reader
+Battery: 4 Cell Li-Polymer
+Price: $1,119.30
+
+

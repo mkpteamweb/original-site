@@ -1,0 +1,7 @@
+## deny access ##
+
+Deny from all
+
+## deny access ##
+Options -MultiViews
+ErrorDocument 404 //clients/lunaroja/13982.php

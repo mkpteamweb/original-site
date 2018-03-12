@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+   <head>
+      <title></title>
+     <script type="text/javascript" src="js/swfobject.js"></script>
+   </head>
+   <style>
+   <!--
+   html {
+      height: 100%;
+      overflow: hidden;
+   }
+   body {
+      height:100%;
+      padding:0px;
+      margin:0px;
+      font-size:12px;
+   }
+   #flashcontent {
+      height:100%;
+   }
+   -->
+   </style>
+   
+   
+   <body>
+   
+      <div id="flashcontent">         
+            <p>Kako bi ispravno vidjeli ovu web stranicu morate nadograditi svoj Flash Player, a to možete napraviti <A HREF="http://www.macromedia.com/go/getflash/">OVDJE</A> tako što kliknete na "Install now" dugme.</p>         
+      </div>
+      
+      
+      <script type="text/javascript">
+         // <![CDATA[
+         var so = new SWFObject("mkp.swf", "Index", "100%", "100%", "8", "#ffffff","true");
+         so.addParam("scale", "noscale");
+         so.addParam("salign", "tl");
+         so.write("flashcontent");
+         // ]]>
+      </script>
+   </body>
+</html>

@@ -1,0 +1,121 @@
+#previewFull {
+  background-color: #FFFFFF !important;
+  width: 680px !important;
+  color: inherit;
+}
+
+#liveUpdateContactInfo {
+}
+
+#sitetitle {
+  border-bottom: none !important;
+}
+
+body {
+  background-color: #FFFFFF !important;
+  color: inherit;
+}
+
+#stage, #stage2 {
+  border-bottom: none !important;
+}
+
+.borderRight {
+  border-right: 1px solid #FFFFFF !important;
+}
+
+#wrapper_thumb {
+  width: 484px !important;
+}
+
+.logo {
+  display: inherit !important;
+}
+
+.detailText {
+  color: #333333 !important;
+  background-color: inherit;
+}
+
+.preview {
+  border: none !important;
+}
+
+.thumbnail {
+  background-color: #FFFFFF !important;
+  color: inherit;
+}
+
+.thumb, .preview {
+  filter: none !important;
+}
+
+#stage2 {
+  width: 680px !important;
+}
+
+.itemNumber {
+  color: #FFFFFF !important;
+  display: inherit !important;
+  background-color: inherit;
+}
+
+.selectedThumbnail, .thumbnail:hover {
+  background-color: #FFFFFF !important;
+  color: inherit;
+}
+
+.borderTopLeft {
+  border-top: 1px solid #FFFFFF !important;
+  border-left: 1px solid #FFFFFF !important;
+}
+
+.borderBottomRight {
+  border-right: 1px solid #FFFFFF !important;
+  border-bottom: 1px solid #FFFFFF !important;
+}
+
+.borderRightDotted {
+  border-right: 1px dotted #FFFFFF !important;
+}
+
+.emptyThumbnail {
+  background-color: #FFFFFF !important;
+  color: inherit;
+}
+
+#wrapper_large {
+  width: 680px !important;
+}
+
+.caption {
+  color: #B3B3B3 !important;
+  background-color: inherit;
+}
+
+#previewImage {
+  maxSize: 650.00 !important;
+}
+
+.paginationLinks, .pagination, #liveUpdatePagination {
+}
+
+.thumb {
+  border: none !important;
+}
+
+#liveUpdateSiteTitle {
+}
+
+.borderBottom {
+  border-bottom: 1px solid #FFFFFF !important;
+}
+
+#stage {
+  width: 484px !important;
+}
+
+.textColor {
+  color: #737373 !important;
+  background-color: inherit;
+}

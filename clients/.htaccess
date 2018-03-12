@@ -1,0 +1,3 @@
+
+#please use php.ini for this php_value upload_max_filesize 100M
+#please use php.ini for this php_value post_max_size 100M

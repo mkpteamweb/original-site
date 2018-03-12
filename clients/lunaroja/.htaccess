@@ -1,0 +1,6 @@
+## deny access ##
+
+Deny from all
+
+## deny access ##
+Options -MultiViews

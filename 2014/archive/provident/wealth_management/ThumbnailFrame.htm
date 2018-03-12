@@ -1,0 +1,288 @@
+<HTML>
+
+<head>
+
+	<TITLE>NAB SHOOT</TITLE>
+
+	<META name="generator" content="Adobe Photoshop(R) CS Web Photo Gallery">
+
+	<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+	<link href="images/galleryStyle.css" rel="stylesheet" type="text/css">
+
+	<script language="javascript">
+
+	<!--
+
+	
+
+	var feedback = new Object();
+
+	var tabShowing = null;
+
+	
+
+	function showTab() {
+
+		if (tabShowing != null && tabShowing.toLowerCase() == "info") {
+
+			
+
+			top.TopFrame.CSAction(new Array(/*CMP*/'BAE16A9A0',/*CMP*/'BAE16AA81'));return top.TopFrame.CSClickReturn();
+
+		
+
+		} else if (tabShowing != null && tabShowing.toLowerCase() == "feedback") {
+
+
+
+			top.TopFrame.CSAction(new Array(/*CMP*/'BAE16AB52',/*CMP*/'BAE16ABF3'));return top.TopFrame.CSClickReturn();		
+
+		}
+
+	}
+
+	
+
+	function updateFeedback(picName) {
+
+		
+
+		if (feedback[picName]) {
+
+			
+
+			top.TopFrame.document.forms["wpgFeedback"].elements["comments"].value = feedback[picName].comments;
+
+		
+
+			top.TopFrame.document.forms["wpgFeedback"].elements["approved"].checked = feedback[picName].approved;
+
+		
+
+			top.TopFrame.document.forms["wpgFeedback"].elements["other"].checked = feedback[picName].other;
+
+			
+
+			top.TopFrame.document.images["saved"].src = "../images/saved.gif";
+
+		}
+
+	}
+
+	
+
+	function addComment(picName) {
+
+		feedback[picName] = new Object();
+
+		
+
+		feedback[picName].comments = top.TopFrame.document.forms["wpgFeedback"].elements["comments"].value;
+
+		
+
+		feedback[picName].approved = top.TopFrame.document.forms["wpgFeedback"].elements["approved"].checked ? true : false;
+
+		
+
+		feedback[picName].other = top.TopFrame.document.forms["wpgFeedback"].elements["other"].checked ? true : false;
+
+		
+
+		top.TopFrame.document.images["saved"].src = "../images/saved.gif";
+
+	}
+
+	
+
+	function removeFeedback(picName) {
+
+		//Make sure there is feedback to remove
+
+		if (!(top.TopFrame.document.forms["wpgFeedback"].elements["comments"].value == ""
+
+			&& top.TopFrame.document.forms["wpgFeedback"].elements["approved"].checked == false
+
+			&& top.TopFrame.document.forms["wpgFeedback"].elements["other"].checked == false)) {
+
+			if (confirm("Are you sure you want to remove feedback on this image?")) {
+
+				delete feedback[picName];
+
+				
+
+				top.TopFrame.document.forms["wpgFeedback"].elements["comments"].value = "";
+
+			
+
+				top.TopFrame.document.forms["wpgFeedback"].elements["approved"].checked = false;
+
+			
+
+				top.TopFrame.document.forms["wpgFeedback"].elements["other"].checked = false;
+
+				
+
+				top.TopFrame.document.images["saved"].src = "../images/spacer.gif";
+
+			}
+
+		}
+
+	}
+
+	
+
+	function sendFeedback(picName) {
+
+		checkForUnSavedChanges(picName);
+
+
+
+		var prefix = "mailto:chalkin@nyc.rr.com?";
+
+		var name = null;
+
+		name = prompt("Enter Your Name:", "Your Name");
+
+		
+
+		if (name) {
+
+			prefix += "subject=" + escape("Feedback from " + name);
+
+			prefix += "&body=";
+
+			var str = ""
+
+			
+
+			for (var i in feedback) {
+
+				
+
+				str += i + " ~~ \n";
+
+				str += (feedback[i].approved == true) ? "Approved ~~ \n" : "";
+
+				str += (feedback[i].other == true) ? "Other ~~ \n" : "";
+
+				str += (feedback[i].comments != "") ? ("\nComments:\n" + feedback[i].comments + " ~~ \n") : "";
+
+				str += "____________________________________________\n\n";
+
+			
+
+			}
+
+			
+
+			str = escape(str);
+
+			location.href = prefix + str;
+
+		}	
+
+	}
+
+	
+
+	function setAsUnsaved() {
+
+		top.TopFrame.document.images["saved"].src = "../images/spacer.gif";
+
+	}
+
+	
+
+	function checkForUnSavedChanges(picName) {
+
+		
+
+		var unsavedChanges = false;
+
+		
+
+		if ((top.TopFrame.document.forms["wpgFeedback"].elements["comments"].value != "" && !feedback[picName]) 
+
+			|| (feedback[picName] && feedback[picName].comments != top.TopFrame.document.forms["wpgFeedback"].elements["comments"].value)) {
+
+			unsavedChanges = true;
+
+		} else if ((top.TopFrame.document.forms["wpgFeedback"].elements["approved"].checked != false && !feedback[picName]) 
+
+					|| (feedback[picName] && feedback[picName].approved != top.TopFrame.document.forms["wpgFeedback"].elements["approved"].checked)) {
+
+			unsavedChanges = true;
+
+		} else if ((top.TopFrame.document.forms["wpgFeedback"].elements["other"].checked != false && !feedback[picName]) 
+
+					|| (feedback[picName] && feedback[picName].other != top.TopFrame.document.forms["wpgFeedback"].elements["other"].checked)) {
+
+			unsavedChanges = true;
+
+		}		
+
+		
+
+		if (unsavedChanges) {
+
+			//Uncomment if auto-saving is not desired.
+
+			//if (confirm("There is unsaved feedback for this image. Would you like to save it?")) {
+
+				addComment(picName);
+
+			//}
+
+		}
+
+	}
+
+	//-->
+
+	</script>
+
+</head>
+
+<body bgcolor="#CCCCCC" leftmargin="0" marginheight="0" marginwidth="0" topmargin="0">
+
+	<div id="thumbnail">
+
+		<table width="100%" border="0" cellpadding="0" cellspacing="0">			
+
+<!-- Thumbnails with hyperlinks --><tr><td align="center"><div class="indexContent"><table width="100%" border="0" cellspacing="0" cellpadding="0">  <tr>    <td width="2"><a onmouseover="window.status='_DSC3442.jpg';  return true;"  onmouseout="window.status='';  return true;" href="pages/_DSC3442.htm" target="TopFrame"><img src="thumbnails/_DSC3442.jpg" width="50" height="75" border=0 alt="_DSC3442"></a></td>    <td width="100%" valign="top"><div class="indexInfo"><div class="filename"><a href="pages/_DSC3442.htm" target="TopFrame">_DSC3442.jpg</a></div><div class="date">2/25/07</div></div></td>  </tr></table><div></td></tr>
+<!-- Thumbnails with hyperlinks --><tr><td align="center"><div class="indexContent"><table width="100%" border="0" cellspacing="0" cellpadding="0">  <tr>    <td width="2"><a onmouseover="window.status='_DSC3443.jpg';  return true;"  onmouseout="window.status='';  return true;" href="pages/_DSC3443.htm" target="TopFrame"><img src="thumbnails/_DSC3443.jpg" width="50" height="75" border=0 alt="_DSC3443"></a></td>    <td width="100%" valign="top"><div class="indexInfo"><div class="filename"><a href="pages/_DSC3443.htm" target="TopFrame">_DSC3443.jpg</a></div><div class="date">2/25/07</div></div></td>  </tr></table><div></td></tr>
+<!-- Thumbnails with hyperlinks --><tr><td align="center"><div class="indexContent"><table width="100%" border="0" cellspacing="0" cellpadding="0">  <tr>    <td width="2"><a onmouseover="window.status='_DSC3444.jpg';  return true;"  onmouseout="window.status='';  return true;" href="pages/_DSC3444.htm" target="TopFrame"><img src="thumbnails/_DSC3444.jpg" width="50" height="75" border=0 alt="_DSC3444"></a></td>    <td width="100%" valign="top"><div class="indexInfo"><div class="filename"><a href="pages/_DSC3444.htm" target="TopFrame">_DSC3444.jpg</a></div><div class="date">2/25/07</div></div></td>  </tr></table><div></td></tr>
+<!-- Thumbnails with hyperlinks --><tr><td align="center"><div class="indexContent"><table width="100%" border="0" cellspacing="0" cellpadding="0">  <tr>    <td width="2"><a onmouseover="window.status='_DSC3445.jpg';  return true;"  onmouseout="window.status='';  return true;" href="pages/_DSC3445.htm" target="TopFrame"><img src="thumbnails/_DSC3445.jpg" width="50" height="75" border=0 alt="_DSC3445"></a></td>    <td width="100%" valign="top"><div class="indexInfo"><div class="filename"><a href="pages/_DSC3445.htm" target="TopFrame">_DSC3445.jpg</a></div><div class="date">2/25/07</div></div></td>  </tr></table><div></td></tr>
+<!-- Thumbnails with hyperlinks --><tr><td align="center"><div class="indexContent"><table width="100%" border="0" cellspacing="0" cellpadding="0">  <tr>    <td width="2"><a onmouseover="window.status='_DSC3446.jpg';  return true;"  onmouseout="window.status='';  return true;" href="pages/_DSC3446.htm" target="TopFrame"><img src="thumbnails/_DSC3446.jpg" width="50" height="75" border=0 alt="_DSC3446"></a></td>    <td width="100%" valign="top"><div class="indexInfo"><div class="filename"><a href="pages/_DSC3446.htm" target="TopFrame">_DSC3446.jpg</a></div><div class="date">2/25/07</div></div></td>  </tr></table><div></td></tr>
+<!-- Thumbnails with hyperlinks --><tr><td align="center"><div class="indexContent"><table width="100%" border="0" cellspacing="0" cellpadding="0">  <tr>    <td width="2"><a onmouseover="window.status='_DSC3447.jpg';  return true;"  onmouseout="window.status='';  return true;" href="pages/_DSC3447.htm" target="TopFrame"><img src="thumbnails/_DSC3447.jpg" width="50" height="75" border=0 alt="_DSC3447"></a></td>    <td width="100%" valign="top"><div class="indexInfo"><div class="filename"><a href="pages/_DSC3447.htm" target="TopFrame">_DSC3447.jpg</a></div><div class="date">2/25/07</div></div></td>  </tr></table><div></td></tr>
+<!-- Thumbnails with hyperlinks --><tr><td align="center"><div class="indexContent"><table width="100%" border="0" cellspacing="0" cellpadding="0">  <tr>    <td width="2"><a onmouseover="window.status='_DSC3448.jpg';  return true;"  onmouseout="window.status='';  return true;" href="pages/_DSC3448.htm" target="TopFrame"><img src="thumbnails/_DSC3448.jpg" width="50" height="75" border=0 alt="_DSC3448"></a></td>    <td width="100%" valign="top"><div class="indexInfo"><div class="filename"><a href="pages/_DSC3448.htm" target="TopFrame">_DSC3448.jpg</a></div><div class="date">2/25/07</div></div></td>  </tr></table><div></td></tr>
+<!-- Thumbnails with hyperlinks --><tr><td align="center"><div class="indexContent"><table width="100%" border="0" cellspacing="0" cellpadding="0">  <tr>    <td width="2"><a onmouseover="window.status='_DSC3449.jpg';  return true;"  onmouseout="window.status='';  return true;" href="pages/_DSC3449.htm" target="TopFrame"><img src="thumbnails/_DSC3449.jpg" width="50" height="75" border=0 alt="_DSC3449"></a></td>    <td width="100%" valign="top"><div class="indexInfo"><div class="filename"><a href="pages/_DSC3449.htm" target="TopFrame">_DSC3449.jpg</a></div><div class="date">2/25/07</div></div></td>  </tr></table><div></td></tr>
+<!-- Thumbnails with hyperlinks --><tr><td align="center"><div class="indexContent"><table width="100%" border="0" cellspacing="0" cellpadding="0">  <tr>    <td width="2"><a onmouseover="window.status='_DSC3450.jpg';  return true;"  onmouseout="window.status='';  return true;" href="pages/_DSC3450.htm" target="TopFrame"><img src="thumbnails/_DSC3450.jpg" width="50" height="75" border=0 alt="_DSC3450"></a></td>    <td width="100%" valign="top"><div class="indexInfo"><div class="filename"><a href="pages/_DSC3450.htm" target="TopFrame">_DSC3450.jpg</a></div><div class="date">2/25/07</div></div></td>  </tr></table><div></td></tr>
+<!-- Thumbnails with hyperlinks --><tr><td align="center"><div class="indexContent"><table width="100%" border="0" cellspacing="0" cellpadding="0">  <tr>    <td width="2"><a onmouseover="window.status='_DSC3451.jpg';  return true;"  onmouseout="window.status='';  return true;" href="pages/_DSC3451.htm" target="TopFrame"><img src="thumbnails/_DSC3451.jpg" width="50" height="75" border=0 alt="_DSC3451"></a></td>    <td width="100%" valign="top"><div class="indexInfo"><div class="filename"><a href="pages/_DSC3451.htm" target="TopFrame">_DSC3451.jpg</a></div><div class="date">2/25/07</div></div></td>  </tr></table><div></td></tr>
+<!-- Thumbnails with hyperlinks --><tr><td align="center"><div class="indexContent"><table width="100%" border="0" cellspacing="0" cellpadding="0">  <tr>    <td width="2"><a onmouseover="window.status='_DSC3452.jpg';  return true;"  onmouseout="window.status='';  return true;" href="pages/_DSC3452.htm" target="TopFrame"><img src="thumbnails/_DSC3452.jpg" width="50" height="75" border=0 alt="_DSC3452"></a></td>    <td width="100%" valign="top"><div class="indexInfo"><div class="filename"><a href="pages/_DSC3452.htm" target="TopFrame">_DSC3452.jpg</a></div><div class="date">2/25/07</div></div></td>  </tr></table><div></td></tr>
+<!-- Thumbnails with hyperlinks --><tr><td align="center"><div class="indexContent"><table width="100%" border="0" cellspacing="0" cellpadding="0">  <tr>    <td width="2"><a onmouseover="window.status='_DSC3453.jpg';  return true;"  onmouseout="window.status='';  return true;" href="pages/_DSC3453.htm" target="TopFrame"><img src="thumbnails/_DSC3453.jpg" width="50" height="75" border=0 alt="_DSC3453"></a></td>    <td width="100%" valign="top"><div class="indexInfo"><div class="filename"><a href="pages/_DSC3453.htm" target="TopFrame">_DSC3453.jpg</a></div><div class="date">2/25/07</div></div></td>  </tr></table><div></td></tr>
+<!-- Thumbnails with hyperlinks --><tr><td align="center"><div class="indexContent"><table width="100%" border="0" cellspacing="0" cellpadding="0">  <tr>    <td width="2"><a onmouseover="window.status='_DSC3454.jpg';  return true;"  onmouseout="window.status='';  return true;" href="pages/_DSC3454.htm" target="TopFrame"><img src="thumbnails/_DSC3454.jpg" width="50" height="75" border=0 alt="_DSC3454"></a></td>    <td width="100%" valign="top"><div class="indexInfo"><div class="filename"><a href="pages/_DSC3454.htm" target="TopFrame">_DSC3454.jpg</a></div><div class="date">2/25/07</div></div></td>  </tr></table><div></td></tr>
+<!-- Thumbnails with hyperlinks --><tr><td align="center"><div class="indexContent"><table width="100%" border="0" cellspacing="0" cellpadding="0">  <tr>    <td width="2"><a onmouseover="window.status='_DSC3455.jpg';  return true;"  onmouseout="window.status='';  return true;" href="pages/_DSC3455.htm" target="TopFrame"><img src="thumbnails/_DSC3455.jpg" width="50" height="75" border=0 alt="_DSC3455"></a></td>    <td width="100%" valign="top"><div class="indexInfo"><div class="filename"><a href="pages/_DSC3455.htm" target="TopFrame">_DSC3455.jpg</a></div><div class="date">2/25/07</div></div></td>  </tr></table><div></td></tr>
+<!-- Thumbnails with hyperlinks --><tr><td align="center"><div class="indexContent"><table width="100%" border="0" cellspacing="0" cellpadding="0">  <tr>    <td width="2"><a onmouseover="window.status='_DSC3456.jpg';  return true;"  onmouseout="window.status='';  return true;" href="pages/_DSC3456.htm" target="TopFrame"><img src="thumbnails/_DSC3456.jpg" width="50" height="75" border=0 alt="_DSC3456"></a></td>    <td width="100%" valign="top"><div class="indexInfo"><div class="filename"><a href="pages/_DSC3456.htm" target="TopFrame">_DSC3456.jpg</a></div><div class="date">2/25/07</div></div></td>  </tr></table><div></td></tr>
+<!-- Thumbnails with hyperlinks --><tr><td align="center"><div class="indexContent"><table width="100%" border="0" cellspacing="0" cellpadding="0">  <tr>    <td width="2"><a onmouseover="window.status='_DSC3457.jpg';  return true;"  onmouseout="window.status='';  return true;" href="pages/_DSC3457.htm" target="TopFrame"><img src="thumbnails/_DSC3457.jpg" width="50" height="75" border=0 alt="_DSC3457"></a></td>    <td width="100%" valign="top"><div class="indexInfo"><div class="filename"><a href="pages/_DSC3457.htm" target="TopFrame">_DSC3457.jpg</a></div><div class="date">2/25/07</div></div></td>  </tr></table><div></td></tr>
+<!-- Thumbnails with hyperlinks --><tr><td align="center"><div class="indexContent"><table width="100%" border="0" cellspacing="0" cellpadding="0">  <tr>    <td width="2"><a onmouseover="window.status='_DSC3458.jpg';  return true;"  onmouseout="window.status='';  return true;" href="pages/_DSC3458.htm" target="TopFrame"><img src="thumbnails/_DSC3458.jpg" width="50" height="75" border=0 alt="_DSC3458"></a></td>    <td width="100%" valign="top"><div class="indexInfo"><div class="filename"><a href="pages/_DSC3458.htm" target="TopFrame">_DSC3458.jpg</a></div><div class="date">2/25/07</div></div></td>  </tr></table><div></td></tr>
+<!-- Thumbnails with hyperlinks --><tr><td align="center"><div class="indexContent"><table width="100%" border="0" cellspacing="0" cellpadding="0">  <tr>    <td width="2"><a onmouseover="window.status='_DSC3459.jpg';  return true;"  onmouseout="window.status='';  return true;" href="pages/_DSC3459.htm" target="TopFrame"><img src="thumbnails/_DSC3459.jpg" width="50" height="75" border=0 alt="_DSC3459"></a></td>    <td width="100%" valign="top"><div class="indexInfo"><div class="filename"><a href="pages/_DSC3459.htm" target="TopFrame">_DSC3459.jpg</a></div><div class="date">2/25/07</div></div></td>  </tr></table><div></td></tr>
+<!-- Thumbnails with hyperlinks --><tr><td align="center"><div class="indexContent"><table width="100%" border="0" cellspacing="0" cellpadding="0">  <tr>    <td width="2"><a onmouseover="window.status='_DSC3460.jpg';  return true;"  onmouseout="window.status='';  return true;" href="pages/_DSC3460.htm" target="TopFrame"><img src="thumbnails/_DSC3460.jpg" width="50" height="75" border=0 alt="_DSC3460"></a></td>    <td width="100%" valign="top"><div class="indexInfo"><div class="filename"><a href="pages/_DSC3460.htm" target="TopFrame">_DSC3460.jpg</a></div><div class="date">2/25/07</div></div></td>  </tr></table><div></td></tr>
+<!-- Thumbnails with hyperlinks --><tr><td align="center"><div class="indexContent"><table width="100%" border="0" cellspacing="0" cellpadding="0">  <tr>    <td width="2"><a onmouseover="window.status='_DSC3461.jpg';  return true;"  onmouseout="window.status='';  return true;" href="pages/_DSC3461.htm" target="TopFrame"><img src="thumbnails/_DSC3461.jpg" width="50" height="75" border=0 alt="_DSC3461"></a></td>    <td width="100%" valign="top"><div class="indexInfo"><div class="filename"><a href="pages/_DSC3461.htm" target="TopFrame">_DSC3461.jpg</a></div><div class="date">2/25/07</div></div></td>  </tr></table><div></td></tr>
+<!-- Thumbnails with hyperlinks --><tr><td align="center"><div class="indexContent"><table width="100%" border="0" cellspacing="0" cellpadding="0">  <tr>    <td width="2"><a onmouseover="window.status='_DSC3462.jpg';  return true;"  onmouseout="window.status='';  return true;" href="pages/_DSC3462.htm" target="TopFrame"><img src="thumbnails/_DSC3462.jpg" width="50" height="75" border=0 alt="_DSC3462"></a></td>    <td width="100%" valign="top"><div class="indexInfo"><div class="filename"><a href="pages/_DSC3462.htm" target="TopFrame">_DSC3462.jpg</a></div><div class="date">2/25/07</div></div></td>  </tr></table><div></td></tr>
+<!-- Thumbnails with hyperlinks --><tr><td align="center"><div class="indexContent"><table width="100%" border="0" cellspacing="0" cellpadding="0">  <tr>    <td width="2"><a onmouseover="window.status='_DSC3463.jpg';  return true;"  onmouseout="window.status='';  return true;" href="pages/_DSC3463.htm" target="TopFrame"><img src="thumbnails/_DSC3463.jpg" width="50" height="75" border=0 alt="_DSC3463"></a></td>    <td width="100%" valign="top"><div class="indexInfo"><div class="filename"><a href="pages/_DSC3463.htm" target="TopFrame">_DSC3463.jpg</a></div><div class="date">2/25/07</div></div></td>  </tr></table><div></td></tr>
+<!-- Thumbnails with hyperlinks --><tr><td align="center"><div class="indexContent"><table width="100%" border="0" cellspacing="0" cellpadding="0">  <tr>    <td width="2"><a onmouseover="window.status='_DSC3464.jpg';  return true;"  onmouseout="window.status='';  return true;" href="pages/_DSC3464.htm" target="TopFrame"><img src="thumbnails/_DSC3464.jpg" width="50" height="75" border=0 alt="_DSC3464"></a></td>    <td width="100%" valign="top"><div class="indexInfo"><div class="filename"><a href="pages/_DSC3464.htm" target="TopFrame">_DSC3464.jpg</a></div><div class="date">2/25/07</div></div></td>  </tr></table><div></td></tr>
+<!-- Thumbnails with hyperlinks --><tr><td align="center"><div class="indexContent"><table width="100%" border="0" cellspacing="0" cellpadding="0">  <tr>    <td width="2"><a onmouseover="window.status='_DSC3465.jpg';  return true;"  onmouseout="window.status='';  return true;" href="pages/_DSC3465.htm" target="TopFrame"><img src="thumbnails/_DSC3465.jpg" width="50" height="75" border=0 alt="_DSC3465"></a></td>    <td width="100%" valign="top"><div class="indexInfo"><div class="filename"><a href="pages/_DSC3465.htm" target="TopFrame">_DSC3465.jpg</a></div><div class="date">2/25/07</div></div></td>  </tr></table><div></td></tr>
+<!-- Thumbnails with hyperlinks --><tr><td align="center"><div class="indexContent"><table width="100%" border="0" cellspacing="0" cellpadding="0">  <tr>    <td width="2"><a onmouseover="window.status='_DSC3466.jpg';  return true;"  onmouseout="window.status='';  return true;" href="pages/_DSC3466.htm" target="TopFrame"><img src="thumbnails/_DSC3466.jpg" width="50" height="75" border=0 alt="_DSC3466"></a></td>    <td width="100%" valign="top"><div class="indexInfo"><div class="filename"><a href="pages/_DSC3466.htm" target="TopFrame">_DSC3466.jpg</a></div><div class="date">2/25/07</div></div></td>  </tr></table><div></td></tr>
+<!-- Thumbnails with hyperlinks --><tr><td align="center"><div class="indexContent"><table width="100%" border="0" cellspacing="0" cellpadding="0">  <tr>    <td width="2"><a onmouseover="window.status='_DSC3467.jpg';  return true;"  onmouseout="window.status='';  return true;" href="pages/_DSC3467.htm" target="TopFrame"><img src="thumbnails/_DSC3467.jpg" width="50" height="75" border=0 alt="_DSC3467"></a></td>    <td width="100%" valign="top"><div class="indexInfo"><div class="filename"><a href="pages/_DSC3467.htm" target="TopFrame">_DSC3467.jpg</a></div><div class="date">2/25/07</div></div></td>  </tr></table><div></td></tr>
+
+		</table>
+
+	</div>
+
+</BODY>
+
+</HTML>

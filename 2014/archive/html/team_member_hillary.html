@@ -1,0 +1,82 @@
+<html>
+
+<head>
+<title>MKP Communications : Our Team : Hillary_Kelbick</title>
+<script type="text/javascript" src="js/oodomimagerollover.js">
+
+	/***********************************************
+	* DOM Image Rollover II- By Adam Smith (http://www.codevendor.com)
+	* Script featured on and available at Dynamic Drive (http://www.dynamicdrive.com)
+	* Keep this notice intact for usage please
+	***********************************************/
+	
+	</script>
+</head>
+
+<body>
+<script language="javascript">
+
+/*
+Random image picker + semi-linear image slideshow  by h. rey kim | webokraft
+*/
+
+var curindex=0
+
+var randomimages=new Array()
+
+	randomimages[0]="team/Dave_Gull.jpg"
+	randomimages[1]="team/Dennis_Chalkin.jpg"
+	randomimages[2]="team/Hermes_Parga.jpg"
+	randomimages[3]="team/Jeff_Keller.jpg"
+	randomimages[4]="team/Laura_DeLaCruz.jpg"
+	randomimages[5]="team/Lisa_Wegimont.jpg"
+	randomimages[6]="team/Melinda_Bell_Faigenbaum.jpg"
+	randomimages[7]="team/Mellisa_Chefec.jpg"
+	randomimages[8]="team/Nick_Puccia.jpg"
+	randomimages[9]="team/Pam_Reich.jpg"
+	randomimages[10]="team/Sandra_Buglione.jpg"
+	randomimages[11]="team/Kay_Creager.jpg"
+
+
+var preload=new Array()
+
+for (n=0; n < randomimages.length ; n++)
+{
+	preload[n]=new Image();
+	//preload[n].src=randomimages[n];
+}
+
+var ranDefault = Math.floor(Math.random()*(randomimages.length));
+
+
+function loadRandomMember()
+{
+
+//document.write('<a href="team_member'+ranDefault+'.html"><img name="defaultimage" src="'+randomimages[ranDefault]+'.jpg" srcover="'+randomimages[ranDefault]+'_on.jpg"></a>');
+window.location="team_member"+(ranDefault+1)+".html"
+}
+
+
+
+</script>
+
+<table border="0" cellpadding="0" cellspacing="0" align="right" width="500" height="200">
+	<tr>
+		<td align="right" valign="top" width="133">
+			<table border="0" cellpadding="0" cellspacing="0" align="right" width="133" height="200">
+				<tr>
+					<td align="right" valign="top"><a href="team_default.html"><img src="images/arrow_member_l.gif" srcover="images/arrow_member_l_on.gif" border="0" width="66" height="130"></a></td>
+				</tr>
+				<tr>
+					<td align="left" valign="bottom"><a href="team_default.html"><img src="images/btn_backtomessage.gif" border="0" width="133" height="17"></a></td>
+				</tr>
+			</table>
+		</td>
+		<td align="left" valign="top" width="350"><img src="team/Hillary_Kelbick.jpg" border="0" width="350" height="200" srcover="team/Hillary_Kelbick_on.jpg"></a></td>
+		<td align="left" valign="top" width="66"><a href="#" onClick="javascript:loadRandomMember();"><img src="images/arrow_member_r.gif" srcover="images/arrow_member_r_on.gif" border="0" width="66" height="130"></a></td>
+	</tr>
+</table>
+
+</body>
+
+</html>

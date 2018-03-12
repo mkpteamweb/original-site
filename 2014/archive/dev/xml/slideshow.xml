@@ -1,0 +1,48 @@
+<!--  
+Dynamic Slideshow with Sideswipe Gradient mask transitions. 
+
+Variable Explanations:
+
+'timer' :: after next image is finished loading number of seconds 
+		between transition
+
+'fadetime' :: velocity of image crossfade. Increment for faster fades, 
+		decrement for slower. Approximately equal to seconds.
+                NEEDS TO BE LOWER THAN 'timer' VALUE
+		
+'xcord' :: x coordinates of top left corner of slideshow images
+
+'ycord' :: y coordinates of top left corner of slideshow images
+
+'swipevis' :: 1 or 0, if set to 1 the low alpha swipes will be visible
+
+'swipealp'  ::  alpha setting of the swipes
+
+'linkson'  ::  1 or 0, if set to 1 images will serve as buttons
+		  that will redirect to designated link
+-->
+
+
+
+
+<gallery timer="5" fadetime="3" xcord="0" ycord="0" swipevis="1" swipealp="0" linkson="0">
+	<image path="images_slideshow/01.jpg"/>
+	<image path="images_slideshow/02.jpg"/>
+	<image path="images_slideshow/03.jpg"/>
+	<image path="images_slideshow/04.jpg"/>
+	<image path="images_slideshow/05.jpg"/>
+	<image path="images_slideshow/06.jpg"/>
+	<image path="images_slideshow/07.jpg"/>
+	<image path="images_slideshow/08.jpg"/>
+	<image path="images_slideshow/09.jpg"/>
+	<image path="images_slideshow/10.jpg"/>
+	<image path="images_slideshow/11.jpg"/>
+	<image path="images_slideshow/12.jpg"/>
+	<image path="images_slideshow/13.jpg"/>
+	<image path="images_slideshow/14.jpg"/>
+	<image path="images_slideshow/15.jpg"/>
+	<image path="images_slideshow/16.jpg"/>
+	<image path="images_slideshow/17.jpg"/>
+	<image path="images_slideshow/18.jpg"/>
+	<image path="images_slideshow/19.jpg"/>
+</gallery>

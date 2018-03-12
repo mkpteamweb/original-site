@@ -1,0 +1,12 @@
+##please use php.ini for this php_value display_errors On
+
+##please use php.ini for this php_flag register_long_arrays On
+
+AddType application/x-httpd-php .php .html
+
+#please use php.ini for this php_value session.name sid
+#please use php.ini for this php_value register_globals On
+
+ErrorDocument 401 /error_pgs/error401.html
+ErrorDocument 403 /error_pgs/error403.html
+ErrorDocument 404 /error_pgs/error404.html
